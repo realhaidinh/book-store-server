@@ -7,6 +7,12 @@ require('dotenv').config();
 var app = require('../app');
 var debug = require('debug')('book-store-server:server');
 var http = require('http');
+var cors = require('cors');
+
+/**
+ * Cors enabled
+ */
+app.use(cors());
 
 /**
  * Get port from environment and store in Express.

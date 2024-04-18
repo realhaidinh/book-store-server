@@ -3,6 +3,11 @@ const Schema = mongoose.Schema;
 const ObjectId = Schema.ObjectId;
 
 const book = new Schema({
+  id: { 
+    type: Number,
+    unique: true,
+    require: true
+  },
   title: String,
   author: [String],
   price: Number,
